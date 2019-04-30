@@ -15,5 +15,5 @@ service: p-circuit-breaker-dashboard
 service_plan: trial
 ---
 service_name: fortunes-db
-service: elephantsql
-service_plan: hippo
+service: cleardb
+service_plan: spark
