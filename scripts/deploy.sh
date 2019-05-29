@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+./mvnw clean package
+
 CF_API=`cf api | head -1 | cut -c 25-`
 
 if [[ $CF_API == *"api.run.pivotal.io"* ]]; then
@@ -9,7 +11,6 @@ if [[ $CF_API == *"api.run.pivotal.io"* ]]; then
     cf create-service p-service-registry trial fortunes-service-registry
     cf create-service p-circuit-breaker-dashboard trial fortunes-circuit-breaker-dashboard
 
-    # cf create-service cloudamqp lemur fortunes-cloud-bus
 else
 
     if [ ! -z "`cf m | grep "p\.config-server"`" ]; then
@@ -27,8 +28,6 @@ else
     cf cs $service_name standard fortunes-config-server -c "$config_json"
     cf cs p-service-registry standard fortunes-service-registry
     cf cs p-circuit-breaker-dashboard standard fortunes-circuit-breaker-dashboard
-
-    # cf create-service p.rabbitmq single-node-3.7 fortunes-cloud-bus
 
 fi
 
