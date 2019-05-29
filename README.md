@@ -11,25 +11,32 @@ mvn clean package
 ./scripts/deploy.sh
 ```
 
-Demo Circuit breaker
+## How to demo
+
+### Show App Working
+1. Access fortune-ui URL in browser and refresh page 
+2. Go to apps manager, navigate to Hystrix dashboard 
+3. Show service registry dashboard
+
+### Demo Circuit breaker
+1. stop fortune-service app
 ```$xslt
 cf stop fortune-service
 ```
+2. Access the fortune UI app and ensure it shows value from 'fallbackFortune' 
 
-Access the fortune UI app and ensure it shows value from 'fallbackFortune' 
+### Demo configuration service
 
-Demo configuration service
-
-Go to configuration/application.yml
-Change the value of 'fallbackFortune' 
-
-Access the fortune UI app and ensure it shows OLD value from 'fallbackFortune' 
+1. Go to configuration/application.yml
+2. Change the value of 'fallbackFortune' 
+3. Access the fortune UI app and ensure it shows OLD value from 'fallbackFortune' 
+4. Invoke actuator endpoint to force config change 
 ```$xslt
 curl -X POST https://<Fortune UI app URL>/actuator/refresh
 ```
-Access the fortune UI app and ensure it shows NEW value from 'fallbackFortune' 
+5. Access the fortune UI app and ensure it shows NEW value from 'fallbackFortune' 
 
-Clean up
+### Clean up
 ```
 ./scripts/undeploy.sh
 ```
