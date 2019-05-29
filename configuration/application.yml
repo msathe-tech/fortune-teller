@@ -1,3 +1,3 @@
 fortune:
-  fallbackFortune: Your future is bright: super bright!
+  fallbackFortune: Your future is bright: enjoy!
   fortuneServiceURL: http://fortune-service
