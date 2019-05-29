@@ -1,3 +1,7 @@
 fortune:
+<<<<<<< HEAD
   fallbackFortune: Your future is bright!
+=======
+  fallbackFortune: Your future is brigh: Brighter than ever!
+>>>>>>> 14c4874fba4b399da8743c94932245fecdf776af
   fortuneServiceURL: http://fortune-service
