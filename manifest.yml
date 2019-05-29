@@ -9,8 +9,9 @@ applications:
   - fortunes-config-server
   - fortunes-service-registry
   - fortunes-circuit-breaker-dashboard
+  - fortunes-cloud-bus
   env:
-    TRUST_CERTS: ((cf_trust_cert))
+    TRUST_CERTS: ((cf_trust_certs))
 - name: fortune-service
   memory: 1024M
   random-route: true
@@ -21,4 +22,4 @@ applications:
   - fortunes-config-server
   - fortunes-service-registry
   env:
-    TRUST_CERTS: ((cf_trust_cert))
+    TRUST_CERTS: ((cf_trust_certs))
