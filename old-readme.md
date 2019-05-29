@@ -1,3 +1,13 @@
+tl;dr
+
+Build and deploy application on current 'cf target'
+
+./mvn clean package
+./scripts/deploy.sh
+
+Clean up
+./scripts/undeploy.sh
+----
 image:https://circleci.com/gh/spring-cloud-services-samples/fortune-teller.svg?style=svg["CircleCI", link="https://circleci.com/gh/spring-cloud-services-samples/fortune-teller"]
 
 = Fortune Teller

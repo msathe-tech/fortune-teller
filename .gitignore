@@ -1,5 +1,7 @@
 # Operating System Files
 
+vars.yml
+
 *.DS_Store
 Thumbs.db
 *.sw?

@@ -9,6 +9,8 @@ applications:
   - fortunes-db
   - fortunes-config-server
   - fortunes-service-registry
+  env:
+    TRUST_CERTS: ((cf_trust_cert))
 - name: fortune-ui
   memory: 1024M
   random-route: true
@@ -18,3 +20,5 @@ applications:
   - fortunes-config-server
   - fortunes-service-registry
   - fortunes-circuit-breaker-dashboard
+  env:
+    TRUST_CERTS: ((cf_trust_cert))

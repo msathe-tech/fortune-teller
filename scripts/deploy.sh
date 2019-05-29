@@ -2,7 +2,7 @@
 
 CF_API=`cf api | head -1 | cut -c 25-`
 
-if [CF_API=="api.run.pivotal.io"]; then
+if [[ $CF_API == *"api.run.pivotal.io"* ]]; then
 
     cf create-service cleardb spark fortunes-db
     cf create-service p-config-server trial fortunes-config-server -c '{"git": { "uri": "https://github.com/msathe-tech/fortune-teller", "searchPaths": "configuration" } }'
@@ -28,6 +28,20 @@ else
 
 fi
 
-echo "cf_trust_certs=$CF_API" > vars.yml
+# Wait until services are ready
+while cf services | grep 'create in progress'
+do
+  sleep 20
+  echo "Waiting for services to initialize..."
+done
+
+# Check to see if any services failed to create
+if cf services | grep 'create failed'; then
+  echo "Service initialization - failed. Exiting."
+  return 1
+fi
+echo "Service initialization - successful"
+
+echo "cf_trust_cert: $CF_API" > vars.yml
 
 cf push -f manifest.yml --vars-file vars.yml
