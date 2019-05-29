@@ -32,4 +32,15 @@ public class FortuneProperties {
 		this.fallbackFortune = fallbackFortune;
 	}
 
+	public String getFortuneServiceURL() {
+		return fortuneServiceURL;
+	}
+
+	public void setFortuneServiceURL(String fortuneServiceURL) {
+		this.fortuneServiceURL = fortuneServiceURL;
+	}
+
+	private String fortuneServiceURL = "http://fortune-service";
+
+
 }
