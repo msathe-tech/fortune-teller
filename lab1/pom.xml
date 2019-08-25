@@ -11,9 +11,7 @@
 	<name>Fortune Teller Cloud-Native Application</name>
 
 	<modules>
-		<module>fortune-teller-fortune-service</module>
-		<module>fortune-teller-ui</module>
-		<module>fortune-teller-gateway</module>
+		<module>fortune-teller-service</module>
 	</modules>
 
 	<parent>
