@@ -27,11 +27,11 @@ n pushing.
 
 ### Test redirection to the UI
 1. Visit `https://$YOUR_GATEWAY_ENDPOINT`
-1. Notice the redirect to `https://$YOUR_UI_ENDPOINT'
+1. Notice the redirect to `https://$YOUR_UI_ENDPOINT`
 
 ### Test redirection to the service
 1. Visit `https://$YOUR_GATEWAY_ENDPOINT/api/random`
-1. Notice the redirect to `https://$YOUR_SERVICE_ENDPOINT/api/random'
+1. Notice the redirect to `https://$YOUR_SERVICE_ENDPOINT/api/random`
 
 ## Clean up
 
