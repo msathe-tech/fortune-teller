@@ -27,8 +27,16 @@ Build and deploy application on current 'cf target'
 ```
 ./deploy.sh
 ```
+
 When prompted for the App Suffix, give a unique identifier. This is to ensure that there is no overlap in cf application names whe
 n pushing.
+
+This deploy script does the following.
+1. Build your applications with Maven
+1. Create the necessary services on Pivotal Cloud Foundry
+1. Push your applications
+
+Examine the manifest.yml file to review the application deployment configurations and service bindings.
 
 ## Test the application
 
