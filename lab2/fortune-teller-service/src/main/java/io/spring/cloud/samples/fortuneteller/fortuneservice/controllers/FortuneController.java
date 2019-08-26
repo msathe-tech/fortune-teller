@@ -29,7 +29,6 @@ import io.spring.cloud.samples.fortuneteller.fortuneservice.respositories.Fortun
 
 @RestController
 @RefreshScope
-@RequestMapping("api")
 public class FortuneController {
 
     @Autowired
