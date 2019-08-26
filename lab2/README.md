@@ -11,7 +11,7 @@ Be sure to note the `fortuneServiceURL` variable. Notice that it refers to the s
 Now take a look at `FortuneService.java`. The `randomFortune()` method, which is invoked in the method mapped to `/random` endpoint in `UiController.java`, makes a rest call to the `fortuneServiceURL` endpoint we saw earlier. By doing so, this application is referring to the binded Service Registry to call the service applciation.
 
 ## Spring Cloud Circuit Breaker
-In the same `FortuneService.java` class, notice that the `randomFortune()` method is annotated with `@HystrixCommand(fallbackMethod = "fallbackFortune" ). When this method fails, it falls back to the `fallbackFortune()` method below, to return a default response instead of an error code. This practice also helps implement a fail-fast methodology.
+In the same `FortuneService.java` class, notice that the `randomFortune()` method is annotated with `@HystrixCommand( fallbackMethod = "fallbackFortune" )`. When this method fails, it falls back to the `fallbackFortune()` method below, to return a default response instead of an error code. This practice also helps implement a fail-fast methodology.
 
 ## Deploying the Application
 <a href="https://push-to.cfapps.io?repo=https%3A%2F%2Fgithub.com%2Fmsathe-tech%2Ffortune-teller.git">
@@ -45,13 +45,13 @@ Examine the manifest.yml file to review the application deployment configuration
 1. Notice another random fortune returned
 
 ### Test Circuit Breaker
-1. Stop your service application (ex. `cf stop $YOUR_APP_SUFFIX-fortune-service)
+1. Stop your service application (ex. `cf stop $YOUR_APP_SUFFIX-fortune-service`)
 1. Refresh the UI
 1. Notice the default fallback message
 
 ### Test Cloud Config
 1. Make a change to you `configuration/application.yml` with a new fallback message
-1. Refresh your application beans using the actuator endpoint (ex. `curl -k https://$YOUR_UI_ENDPOINT/actuator/refresh -X GET)
+1. Refresh your application beans using the actuator endpoint (ex. `curl -k https://$YOUR_UI_ENDPOINT/actuator/refresh -X GET`)
 1. Refresh the UI
 1. Notice the changed default fallback message
 
