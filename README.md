@@ -1,42 +1,34 @@
-<a href="https://push-to.cfapps.io?repo=https%3A%2F%2Fgithub.com%2Fmsathe-tech%2Ffortune-teller.git">
- 	<img src="https://push-to.cfapps.io/ui/assets/images/Push-to-Pivotal-Light.svg" width="200" alt="Push">
-</a>
+# Cloud Native Application Development Workshop
 
-## Or 
+This repository is a collection of progressive hands-on labs that will guide you through building a cloud native application with Spring on Pivotal Cloud Foundry. The workshop will use the following components:
 
-Build and deploy application on current 'cf target'
+1. Spring Data JPA
+1. Spring Cloud Web
+1. Spring Cloud Config
+1. Spring Cloud Service Registry
+1. Spring Cloud Gateway
+1. Spring Cloud Circuit Breaker
 
+## Fortune Teller
+
+The Fortune Teller app is a REST based web application that returns a random fortune each time you visit the web page.
+
+## Prerequisites
+
+Ensure that you have the following
+
+1. JDK 1.8.x
+1. cf CLI 6.40.x+
+1. An IDE of your choice (i.e. Spring Tool Suite, Eclipse, IDEa)
+
+## Getting Started
+
+Clone this repository to an environment of your choice.
+
+```bash
+git clone https://github.com/msathe-tech/fortune-teller.git
 ```
-mvn clean package
-./scripts/deploy.sh
-```
 
-## How to demo
-
-### Show App Working
-1. Access fortune-ui URL in browser and refresh page 
-2. Go to apps manager, navigate to Hystrix dashboard 
-3. Show service registry dashboard
-
-### Demo Circuit breaker
-1. stop fortune-service app
-```$xslt
-cf stop fortune-service
-```
-2. Access the fortune UI app and ensure it shows value from 'fallbackFortune' 
-
-### Demo configuration service
-
-1. Go to configuration/application.yml
-2. Change the value of 'fallbackFortune' 
-3. Access the fortune UI app and ensure it shows OLD value from 'fallbackFortune' 
-4. Invoke actuator endpoint to force config change 
-```$xslt
-curl -X POST https://<Fortune UI app URL>/actuator/refresh
-```
-5. Access the fortune UI app and ensure it shows NEW value from 'fallbackFortune' 
-
-### Clean up
-```
-./scripts/undeploy.sh
-```
+## Authors
+* **Bernard Park** - [Github](https://github.com/bernardpark)
+* **Madhav Sathe** - [Github](https://github.com/msathe-tech)

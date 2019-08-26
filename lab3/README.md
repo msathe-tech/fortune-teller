@@ -40,3 +40,7 @@ You can choose to clean up your environment, or keep it for the next lab.
 ```
 ./scripts/undeploy.sh
 ```
+
+## Authors
+* **Bernard Park** - [Github](https://github.com/bernardpark)
+* **Madhav Sathe** - [Github](https://github.com/msathe-tech)
