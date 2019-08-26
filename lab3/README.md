@@ -1,11 +1,11 @@
 # Lab 3 - Implementing a Gateway
 
-## What's changed?
+## Overview
+In this lab, you will implement a gateway that routes all your traffic to the correct application components.
 
-### Spring Cloud Gateway Project
+## Spring Cloud Gateway
 You will notice that there is a new module named `fortune-teller-gateway`. This is a Spring Cloud Gateway instance that routes traffice to either the `fortune-teller-ui` or the `fortune-teller-service`. For example, visiting the gateway's endpoint in a browser will redirect you to the ui's endpoint, and adding an `/api` path to the gateway's endpoint will redirect to the service's endpoint.
 
-### Key Code
 After examining the project structure, take a look at this code snippet from application.yml. You should notice the routes configured to redirect traffic to the correct components.
 
 ## Deploying the Application
