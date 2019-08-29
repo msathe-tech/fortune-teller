@@ -54,6 +54,12 @@
 			<version>2.1.4.RELEASE</version>
 		</dependency>
 
+		<!-- Cloud Bus -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
+		</dependency>
+
 		<!-- Tools -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

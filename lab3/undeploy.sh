@@ -11,6 +11,7 @@ REGION=$UINPUT
 # delete apps
 cf delete $UINPUT-fortune-service -f
 cf delete $UINPUT-fortune-ui -f
+cf delete $UINPUT-fortune-gateway -f
 
 # delete services
 cf delete-service fortunes-db -f
