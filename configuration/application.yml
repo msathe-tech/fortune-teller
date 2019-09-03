@@ -1,6 +1,0 @@
-api:
-  message: Hello World!
-fortune:
-  fallbackFortune: Your future is bright! Enjoy!
-  fortuneUIURL: http://fortune-ui
-  fortuneServiceURL: http://fortune-service
