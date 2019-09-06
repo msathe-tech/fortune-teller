@@ -8,6 +8,7 @@ This repository is a collection of progressive hands-on labs that will guide you
 1. Spring Cloud Service Registry
 1. Spring Cloud Gateway
 1. Spring Cloud Circuit Breaker
+1. CredHub
 
 ## Fortune Teller
 
@@ -27,6 +28,7 @@ Ensure that you have the following
 1. cf CLI 6.40.x+
 1. An IDE of your choice (i.e. Spring Tool Suite, Eclipse, IDEa)
 1. PCF prerequisites (explained in Lab0)
+1. An external Database (accessible through the Internet, i.e. an RDS or GCP SQL instance)
 
 # Architecture
 

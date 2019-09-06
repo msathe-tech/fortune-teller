@@ -32,44 +32,52 @@ else
 fi
 
 # Check Marketplace
-if [ ! -z "`cf m | grep "p\.mysql"`" ]; then
+cf m > marketplace.txt
+
+if [ ! -z "`cat marketplace.txt | grep "p\.mysql"`" ]; then
   echo "Found p.mysql"
-elif [ ! -z "`cf m | grep "p-mysql"`" ]; then
+elif [ ! -z "`cat marketplace.txt | grep "p-mysql"`" ]; then
   echo "Found p-mysql"
 else
   echo "[ERROR] Could not find the MySQL tile." 
   EXITCODE=0
 fi
-if [ ! -z "`cf m | grep "p\.config-server"`" ]; then
+if [ ! -z "`cat marketplace.txt | grep "p\.config-server"`" ]; then
   echo "Found p.config-server"
-elif [ ! -z "`cf m | grep "p-config-server"`" ]; then
+elif [ ! -z "`cat marketplace.txt | grep "p-config-server"`" ]; then
   echo "Found p-config-server"
 else
   echo "[ERROR] Could not find the Config Server tile." 
   EXITCODE=0
 fi
-if [ ! -z "`cf m | grep "p\.service-registry"`" ]; then
+if [ ! -z "`cat marketplace.txt | grep "p\.service-registry"`" ]; then
   echo "Found p.service-registry"
-elif [ ! -z "`cf m | grep "p-service-registry"`" ]; then
+elif [ ! -z "`cat marketplace.txt | grep "p-service-registry"`" ]; then
   echo "Found p-service-registry"
 else
   echo "[ERROR] Could not find the Service Registry tile." 
   EXITCODE=0
 fi
-if [ ! -z "`cf m | grep "p\.circuit-breaker-dashboard"`" ]; then
+if [ ! -z "`cat marketplace.txt | grep "p\.circuit-breaker-dashboard"`" ]; then
   echo "Found p.circuit-breaker-dashboard"
-elif [ ! -z "`cf m | grep "p-circuit-breaker-dashboard"`" ]; then
+elif [ ! -z "`cat marketplace.txt | grep "p-circuit-breaker-dashboard"`" ]; then
   echo "Found p-circuit-breaker-dashboard"
 else
   echo "[ERROR] Could not find the Circuit Breaker Dashboard tile."
   EXITCODE=0
 fi
-if [ ! -z "`cf m | grep "p\.rabbitmq"`" ]; then
+if [ ! -z "`cat marketplace.txt | grep "p\.rabbitmq"`" ]; then
   echo "Found p.rabbitmq"
-elif [ ! -z "`cf m | grep "p-rabbitmq"`" ]; then
+elif [ ! -z "`cat marketplace.txt | grep "p-rabbitmq"`" ]; then
   echo "Found p-rabbitmq"
 else
   echo "[ERROR] Could not find the RabbitMQ tile."
+  EXITCODE=0
+fi
+if [ ! -z "`cat marketplace.txt | grep "credhub"`" ]; then
+  echo "Found credhub"
+else
+  echo "[ERROR] Could not find the CredHub tile."
   EXITCODE=0
 fi
 
@@ -81,3 +89,5 @@ fi
 
 echo "*********************************************************************************************************"
 
+rm marketplace.txt
+exit $EXITCODE
