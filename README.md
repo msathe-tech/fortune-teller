@@ -29,6 +29,7 @@ Ensure that you have the following
 1. An IDE of your choice (i.e. Spring Tool Suite, Eclipse, IDEa)
 1. PCF prerequisites (explained in Lab0)
 1. An external Database (accessible through the Internet, i.e. an RDS or GCP SQL instance)
+1. Maven 
 
 # Architecture
 
