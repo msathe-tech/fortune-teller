@@ -26,6 +26,7 @@ Ensure that you have the following
 1. JDK 1.8.x
 1. cf CLI 6.40.x+
 1. An IDE of your choice (i.e. Spring Tool Suite, Eclipse, IDEa)
+1. PCF prerequisites (explained in Lab0)
 
 ## Getting Started
 
@@ -42,12 +43,42 @@ git clone https://github.com/bernardpark/fortune-teller-ui.git
 # Workshop
 
 ## Architecture
-The series of Fortune Teller microservices are designed as shown below.
+This workshop will progressively deploy the Fortune Teller microservices to achieve an ideal Cloud Native Application Architecture. Each application is contained in its own repository, as listed in the previous section. Each lab will iterate the growing application ecosystem, with details and instructions to guide the development and deployment practice.
+
+The series of the Fortune Teller microservices are designed as shown below.
 
 **TODO:INSERT BLOCK DIAGRAM**
 
 ## Labs
+
+### Lab0 - Check requirements
+This workshop requires a few additional requirements to successfully deploy to Pivotal Cloud Foundry.
+
+1. Internet access OR access to a artifact repository to pull Spring and Pivotal dependencies
+1. A Pivotal Application Service and access to the Marketplace
+1. Spring Cloud Services, MySQL, and RabbitMQ in the Marketplace
+
+Run the following script to ensure that your environment is ready. If not, you may need to resolve the issues as output by the script.
+
+```
+./check.sh
+```
+
+If your environment is prepared, you can move on to Lab1 - Create a Service.
+
 ### Lab1 - Create a Service
+In Lab1, we will begin by creating a simple service application that consumes a MySQL backend, and is exposed with a REST layer.
+
+The following diagram represents the target end state after completing Lab1.
+
+To begin, clone the Fortune Service application.
+
+```
+git clone https://github.com/bernardpark/fortune-teller-service.git
+```
+
+Read through the instructions in the [Fortune Service repository](https://github.com/bernardpark/fortune-teller-service) and return here once completed to move on to lab2.
+
 ### Lab2 - Add an API Layer
 ### Lab3 - Add a UI
 ### Lab4 - Implement a Gateway
