@@ -75,11 +75,29 @@ git pull origin master_lab
 
 Read through the instructions in the [Fortune Service repository](https://github.com/bernardpark/fortune-teller-service/tree/master_lab) and return here once completed to move on to lab2.
 
-## Lab2 - Add an API Layer
+## Lab2 - Create a Configuration Repository
 
-In Lab2, we will add an API in front of the service application that will act as the backend-for-frontend for subsequent consumers.
+In Lab1, we will begin by creating a simple configuration repository. Fork the provided Git repository, or gain access to a separate repository. Any Git repository will work with these series of labs as long as the property keys are named the same. Make sure your properties look like this.
 
-The following diagram represents the target end state after completing Lab2.
+```
+api:
+  fallbackFortune: "API is not responding."
+  apiURL: //fortune-api
+service:
+  fallbackFortune: "Your future is bright. Enjoy!"
+  serviceURL: //fortune-service
+url:
+  apiURL: http://fortune-api
+  uiURL: http://fortune-ui
+```
+
+Once completed, move on to lab3.
+
+## Lab3 - Add an API Layer
+
+In Lab3, we will add an API in front of the service application that will act as the backend-for-frontend for subsequent consumers.
+
+The following diagram represents the target end state after completing Lab3.
 
 **TODO:INSERT BLOCK DIAGRAM**
 
@@ -91,13 +109,13 @@ git checkout -b master_lab
 git pull origin master_lab
 ```
 
-Read through the instructions in the [Fortune API repository](https://github.com/bernardpark/fortune-teller-api/tree/master_lab) and return here once completed to move on to lab3.
+Read through the instructions in the [Fortune API repository](https://github.com/bernardpark/fortune-teller-api/tree/master_lab) and return here once completed to move on to lab4.
 
-## Lab3 - Add a UI
+## Lab4 - Add a UI
 
-In Lab3, we will deploy a frontend UI, which will be a consumer of the Fortune Service application through the Fortune API.
+In Lab4, we will deploy a frontend UI, which will be a consumer of the Fortune Service application through the Fortune API.
 
-The following diagram represents the target end state after completing Lab3.
+The following diagram represents the target end state after completing Lab4.
 
 **TODO:INSERT BLOCK DIAGRAM**
 
@@ -111,11 +129,11 @@ git pull origin master_lab
 
 Read through the instructions in the [Fortune UI repository](https://github.com/bernardpark/fortune-teller-ui/tree/master_lab) and return here once completed to move on to lab4.
 
-## Lab4 - Implement a Gateway
+## Lab5 - Implement a Gateway
 
-In Lab4, we will add a gateway application as the single point of entry into our microservice ecosystem. It will route traffic as necessary to its underlying components.
+In Lab5, we will add a gateway application as the single point of entry into our microservice ecosystem. It will route traffic as necessary to its underlying components.
 
-The following diagram represents the target end state after completing Lab4.
+The following diagram represents the target end state after completing Lab5.
 
 **TODO:INSERT BLOCK DIAGRAM**
 
@@ -127,13 +145,13 @@ git checkout -b master_lab
 git pull origin master_lab
 ```  
 
-Read through the instructions in the [Fortune Gateway repository](https://github.com/bernardpark/fortune-teller-gateway/tree/master_lab) and return here once completed to move on to lab5.
+Read through the instructions in the [Fortune Gateway repository](https://github.com/bernardpark/fortune-teller-gateway/tree/master_lab) and return here once completed to move on to lab6.
 
-## Lab5 - Use CredHub and an external data backend
+## Lab6 - Use CredHub and an external data backend
 
-In Lab5, we will redeploy a newer version of the Fortune Service application so that it consumes an external database backend. It will leverage Credhub to encrypt and manage external connection details.
+In Lab6, we will redeploy a newer version of the Fortune Service application so that it consumes an external database backend. It will leverage Credhub to encrypt and manage external connection details.
 
-The following diagram represents the target end state after completing Lab5.
+The following diagram represents the target end state after completing Lab6.
 
 **TODO:INSERT BLOCK DIAGRAM**
 
