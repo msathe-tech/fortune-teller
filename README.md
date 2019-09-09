@@ -65,13 +65,15 @@ The following diagram represents the target end state after completing Lab1.
 
 **TODO:INSERT BLOCK DIAGRAM**
 
-To begin, clone the Fortune Service application.
+To begin, clone the Fortune Service application and switch to the `master_lab` branch.
 
 ```
 git clone https://github.com/bernardpark/fortune-teller-service.git
+git checkout -b master_lab
+git pull origin master_lab
 ```
 
-Read through the instructions in the [Fortune Service repository](https://github.com/bernardpark/fortune-teller-service) and return here once completed to move on to lab2.
+Read through the instructions in the [Fortune Service repository](https://github.com/bernardpark/fortune-teller-service/tree/master_lab) and return here once completed to move on to lab2.
 
 ## Lab2 - Add an API Layer
 
@@ -81,13 +83,15 @@ The following diagram represents the target end state after completing Lab2.
 
 **TODO:INSERT BLOCK DIAGRAM**
 
-To begin, clone the Fortune API application.
+To begin, clone the Fortune API application and switch to the `master_lab` branch.
 
 ```
 git clone https://github.com/bernardpark/fortune-teller-api.git
+git checkout -b master_lab
+git pull origin master_lab
 ```
 
-Read through the instructions in the [Fortune API repository](https://github.com/bernardpark/fortune-teller-api) and return here once completed to move on to lab3.
+Read through the instructions in the [Fortune API repository](https://github.com/bernardpark/fortune-teller-api/tree/master_lab) and return here once completed to move on to lab3.
 
 ## Lab3 - Add a UI
 
@@ -97,13 +101,15 @@ The following diagram represents the target end state after completing Lab3.
 
 **TODO:INSERT BLOCK DIAGRAM**
 
-To begin, clone the Fortune UI application.
+To begin, clone the Fortune UI application and switch to the `master_lab` branch.
 
 ```
 git clone https://github.com/bernardpark/fortune-teller-ui.git
+git checkout -b master_lab
+git pull origin master_lab
 ```  
 
-Read through the instructions in the [Fortune UI repository](https://github.com/bernardpark/fortune-teller-ui) and return here once completed to move on to lab4.
+Read through the instructions in the [Fortune UI repository](https://github.com/bernardpark/fortune-teller-ui/tree/master_lab) and return here once completed to move on to lab4.
 
 ## Lab4 - Implement a Gateway
 
@@ -113,13 +119,15 @@ The following diagram represents the target end state after completing Lab4.
 
 **TODO:INSERT BLOCK DIAGRAM**
 
-To begin, clone the Fortune Gateway application.
+To begin, clone the Fortune Gateway application and switch to the `master_lab` branch.
 
 ```
 git clone https://github.com/bernardpark/fortune-teller-gateway.git
+git checkout -b master_lab
+git pull origin master_lab
 ```  
 
-Read through the instructions in the [Fortune Gateway repository](https://github.com/bernardpark/fortune-teller-gateway) and return here once completed to move on to lab5.
+Read through the instructions in the [Fortune Gateway repository](https://github.com/bernardpark/fortune-teller-gateway/tree/master_lab) and return here once completed to move on to lab5.
 
 ## Lab5 - Use CredHub and an external data backend
 
@@ -129,15 +137,15 @@ The following diagram represents the target end state after completing Lab5.
 
 **TODO:INSERT BLOCK DIAGRAM**
 
-To begin, change directories into the cloned Fortune Service and switch to the `credhub` branch.
+To begin, change directories into the cloned Fortune Service and switch to the `credhub_lab` branch.
 
 ```
 cd $WORKSHOP_DIR/fortune-teller-service
-git checkout -b credhub
-git pull origin credhub
+git checkout -b credhub_lab
+git pull origin credhub_lab
 ```  
 
-Read through the instructions in the [Fortune Service repository credhub branch](https://github.com/bernardpark/fortune-teller-service/tree/credhub) and return here once completed to move on to labx.
+Read through the instructions in the [Fortune Service repository credhub branch](https://github.com/bernardpark/fortune-teller-service/tree/credhub_lab) and return here once completed to move on to labx.
 
 
 ## Authors
