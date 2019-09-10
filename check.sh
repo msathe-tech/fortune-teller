@@ -70,6 +70,8 @@ if [ ! -z "`cat marketplace.txt | grep "p\.rabbitmq"`" ]; then
   echo "Found p.rabbitmq"
 elif [ ! -z "`cat marketplace.txt | grep "p-rabbitmq"`" ]; then
   echo "Found p-rabbitmq"
+elif [ ! -z "`cat marketplace.txt | grep "cloudamqp"`" ]; then
+  echo "Found cloudamqp"
 else
   echo "[ERROR] Could not find the RabbitMQ tile."
   EXITCODE=0
