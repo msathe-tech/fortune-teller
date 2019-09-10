@@ -49,6 +49,9 @@ This workshop requires a few additional requirements to successfully deploy to P
 1. A Pivotal Application Service and access to the Marketplace
 1. Spring Cloud Services, MySQL, and RabbitMQ in the Marketplace
 
+
+First, make sure you have logged into your target PCF foundation.
+
 Run the following script to ensure that your environment is ready. If not, you may need to resolve the issues as output by the script.
 
 ```
