@@ -57,7 +57,7 @@ Run the following script to ensure that your environment is ready. If not, you m
 
 If your environment is prepared, you can move on to Lab1 - Create a Service.
 
-## Lab1 - Create a Service
+## [Lab1 - Create a Service](#lab1)
 
 In Lab1, we will begin by creating a simple service application that consumes a MySQL backend, and is exposed with a REST layer.
 
@@ -75,7 +75,7 @@ git pull origin master_lab
 
 Read through the instructions in the [Fortune Service repository](https://github.com/bernardpark/fortune-teller-service/tree/master_lab) and return here once completed to move on to lab2.
 
-## Lab2 - Create a Configuration Repository
+## [Lab2 - Create a Configuration Repository](#lab2)
 
 In Lab1, we will begin by creating a simple configuration repository. Fork the provided Git repository, or gain access to a separate repository. Any Git repository will work with these series of labs as long as the property keys are named the same. Make sure your properties look like this, **with the last couple URLs matching your API and UI endpoints (which will be deployed in labs 3 and 4).**
 
@@ -93,7 +93,7 @@ url:
 
 Once completed, move on to lab3.
 
-## Lab3 - Add an API Layer
+## [Lab3 - Add an API Layer](#lab3)
 
 In Lab3, we will add an API in front of the service application that will act as the backend-for-frontend for subsequent consumers.
 
@@ -111,7 +111,7 @@ git pull origin master_lab
 
 Read through the instructions in the [Fortune API repository](https://github.com/bernardpark/fortune-teller-api/tree/master_lab) and return here once completed to move on to lab4.
 
-## Lab4 - Add a UI
+## [Lab4 - Add a UI](#lab4)
 
 In Lab4, we will deploy a frontend UI, which will be a consumer of the Fortune Service application through the Fortune API.
 
@@ -129,7 +129,7 @@ git pull origin master_lab
 
 Read through the instructions in the [Fortune UI repository](https://github.com/bernardpark/fortune-teller-ui/tree/master_lab) and return here once completed to move on to lab4.
 
-## Lab5 - Implement a Gateway
+## [Lab5 - Implement a Gateway](#lab5)
 
 In Lab5, we will add a gateway application as the single point of entry into our microservice ecosystem. It will route traffic as necessary to its underlying components.
 
@@ -147,7 +147,7 @@ git pull origin master_lab
 
 Read through the instructions in the [Fortune Gateway repository](https://github.com/bernardpark/fortune-teller-gateway/tree/master_lab) and return here once completed to move on to lab6.
 
-## Lab6 - Use CredHub and an external data backend
+## [Lab6 - Use CredHub and an external data backend](#lab6)
 
 In Lab6, we will redeploy a newer version of the Fortune Service application so that it consumes an external database backend. It will leverage Credhub to encrypt and manage external connection details.
 
@@ -163,7 +163,10 @@ git checkout -b credhub_lab
 git pull origin credhub_lab
 ```  
 
-Read through the instructions in the [Fortune Service repository credhub branch](https://github.com/bernardpark/fortune-teller-service/tree/credhub_lab) and return here once completed to move on to labx.
+Read through the instructions in the [Fortune Service repository credhub branch](https://github.com/bernardpark/fortune-teller-service/tree/credhub_lab) and return here once completed to move on to lab7.
+
+## [Lab7 - Configure AutoScaling](#lab7)
+**TODO: Add Lab7 here**
 
 
 ## Authors
