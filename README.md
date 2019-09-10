@@ -50,13 +50,24 @@ This workshop requires a few additional requirements to successfully deploy to P
 1. Spring Cloud Services, MySQL, and RabbitMQ in the Marketplace
 
 
-First, make sure you have logged into your target PCF foundation.
+First, create a workshop directory of your choice and clone this repository into it.
+
+```
+mkdir $WORKSHOP_DIR_NAME
+cd $WORKSHOP_DIR_NAME
+git clone https://github.com/msathe-tech/fortune-teller.git
+```
+
+Now, make sure you have logged into your target PCF foundation.
 
 Run the following script to ensure that your environment is ready. If not, you may need to resolve the issues as output by the script.
 
 ```
+cd $WORKSHOP_DIR_NAME
 ./check.sh
 ```
+
+If you don't have Credhub, don't worry. Labs 1-4 should be fine.
 
 If your environment is prepared, you can move on to Lab1 - Create a Service.
 
@@ -68,10 +79,12 @@ The following diagram represents the target end state after completing Lab1.
 
 **TODO:INSERT BLOCK DIAGRAM**
 
-To begin, clone the Fortune Service application and switch to the `master_lab` branch.
+To begin, clone the Fortune Service application into the root workshop directory and switch to the `master_lab` branch.
 
 ```
+cd /path/to/$WORKSHOP_DIR_NAME
 git clone https://github.com/bernardpark/fortune-teller-service.git
+cd fortune-teller-service
 git checkout -b master_lab
 git pull origin master_lab
 ```
@@ -104,10 +117,12 @@ The following diagram represents the target end state after completing Lab3.
 
 **TODO:INSERT BLOCK DIAGRAM**
 
-To begin, clone the Fortune API application and switch to the `master_lab` branch.
+To begin, clone the Fortune API application into the root workshop directory and switch to the `master_lab` branch.
 
 ```
+cd /path/to/$WORKSHOP_DIR_NAME
 git clone https://github.com/bernardpark/fortune-teller-api.git
+cd fortune-teller-api
 git checkout -b master_lab
 git pull origin master_lab
 ```
@@ -122,10 +137,12 @@ The following diagram represents the target end state after completing Lab4.
 
 **TODO:INSERT BLOCK DIAGRAM**
 
-To begin, clone the Fortune UI application and switch to the `master_lab` branch.
+To begin, clone the Fortune UI application into the root workshop directory and switch to the `master_lab` branch.
 
 ```
+cd /path/to/$WORKSHOP_DIR_NAME
 git clone https://github.com/bernardpark/fortune-teller-ui.git
+cd fortune-teller-ui
 git checkout -b master_lab
 git pull origin master_lab
 ```  
@@ -140,10 +157,12 @@ The following diagram represents the target end state after completing Lab5.
 
 **TODO:INSERT BLOCK DIAGRAM**
 
-To begin, clone the Fortune Gateway application and switch to the `master_lab` branch.
+To begin, clone the Fortune Gateway application into the root workshop directory and switch to the `master_lab` branch.
 
 ```
+cd /path/to/$WORKSHOP_DIR_NAME
 git clone https://github.com/bernardpark/fortune-teller-gateway.git
+cd fortune-teller-gateway
 git checkout -b master_lab
 git pull origin master_lab
 ```  
@@ -161,7 +180,7 @@ The following diagram represents the target end state after completing Lab6.
 To begin, change directories into the cloned Fortune Service and switch to the `credhub_lab` branch.
 
 ```
-cd $WORKSHOP_DIR/fortune-teller-service
+cd /path/to/$WORKSHOP_DIR/fortune-teller-service
 git checkout -b credhub_lab
 git pull origin credhub_lab
 ```  
