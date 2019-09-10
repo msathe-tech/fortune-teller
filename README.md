@@ -77,7 +77,7 @@ Read through the instructions in the [Fortune Service repository](https://github
 
 ## Lab2 - Create a Configuration Repository
 
-In Lab1, we will begin by creating a simple configuration repository. Fork the provided Git repository, or gain access to a separate repository. Any Git repository will work with these series of labs as long as the property keys are named the same. Make sure your properties look like this.
+In Lab1, we will begin by creating a simple configuration repository. Fork the provided Git repository, or gain access to a separate repository. Any Git repository will work with these series of labs as long as the property keys are named the same. Make sure your properties look like this, **with the last couple URLs matching your API and UI endpoints (which will be deployed in labs 3 and 4).**
 
 ```
 api:
@@ -87,8 +87,8 @@ service:
   fallbackFortune: "Your future is bright. Enjoy!"
   serviceURL: //fortune-service
 url:
-  apiURL: http://fortune-api
-  uiURL: http://fortune-ui
+  apiURL: http://fortune-api.apps.run.pivotal.io
+  uiURL: http://fortune-ui.apps.run.pivotal.io
 ```
 
 Once completed, move on to lab3.
